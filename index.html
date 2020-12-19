@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Title Page-->
+    <title>Admission Form</title>
+
+    <!-- Icons font CSS-->
+    <link
+      href="vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all" />
+    <link
+      href="vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all" />
+  </head>
+
+  <body>
+    <div class="page-wrapper p-t-30 p-b-10">
+      <div class="wrapper wrapper--w790">
+        <div class="card card-5">
+          <div class="card-heading">
+            <h2 class="title">Admission Form</h2>
+          </div>
+
+        <!-- Class & session -->
+          <div class="card-body">
+            <form method="POST" action="submit.php">
+              <div class="form-row" style="margin-top: 40px">
+                <div class="name">Admission in Class</div>
+                <div class="value">
+                  <div class="input-group">
+                    <div class="row row-space">
+                      <div class="col-2">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="admission_class">
+                            <option disabled="disabled" selected="selected">
+                              --Select Class--
+                            </option>
+                          <option value="1">1st</option>
+                          <option value="2">2nd</option>
+                          <option value="3">3rd</option>
+                          <option value="4">4th</option>
+                          <option value="5">5th</option>
+                          <option value="6">6th</option>
+                          <option value="7">7th</option>
+                          <option value="8">8th</option>
+                          <option value="9">9th</option>
+                          <option value="10">10th</option>
+                          <option value="11">11th</option>
+                          <option value="12">12th</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="admission_class">
+                            <option disabled="disabled" selected="selected">
+                              --Select Session--
+                            </option>
+                            <option>Session 1</option>
+                          <option>Session 2</option>
+                          <option>Session 3</option>
+                          
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          <!-- PersonalDetails -->
+                <label class="label label--block">Personal Details:</label>
+                <div
+                  style="
+                    border: 2px solid gray;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div class="form-row m-b-55">
+                    <div class="name">Name</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="first_name"
+                              placeholder="First Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="last_name"
+                              placeholder="Last Name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  gender section -->
+
+                  <div class="form-row m-b-55">
+                    <label class="label label--block">Gender</label>
+                    <div class="p-t-20">
+                      <label class="radio-container m-r-55"
+                        >Male
+                        <input type="radio" name="gender" value="male" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container"
+                        >Female
+                        <input type="radio" name="gender" value="female" />
+                        <span class="checkmark"></span>
+                      </label>
+
+                      <label class="radio-container" style="margin-left: 20px"
+                        >Other
+                        <input type="radio" name="gender" value="other" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- date of birth  -->
+                  <div class="form-row">
+                    <div class="name">DOB</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="date"
+                              name="dob"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input type="file" name="file_dob" id="file" />
+                          </div>
+                          <span
+                            ><small
+                              >(Upload DOB certificate. Max File Size 50
+                              MB)</small
+                            >
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- parents details -->
+                <label class="label label--block">Details of Parents</label>
+                <div
+                  style="
+                    border: 2px solid gray;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div class="form-row">
+                    
+                    <div class="name">Name</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              placeholder="Mother's name"
+                              name="mother_name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              placeholder="Father/Guardian name"
+                              name="father_name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 2nd -->
+
+                  <div class="form-row">
+                    <div class="name">Educational Qualification</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              placeholder="Mother qualification"
+                              name="m_eq"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              placeholder="Father/Guardian qualification"
+                              name="f_eq"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 3rd -->
+
+                  <div class="form-row">
+                    <div class="name">Residential Address</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              placeholder="Mother's res. address"
+                              name="m_res"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              placeholder="Father/Guardian res. address"
+                              name="f_res"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4th -->
+
+                  <div class="form-row">
+                    <div class="name">Email</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="m_email"
+                              placeholder="Mother's Email"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="f_email"
+                              placeholder="Father/Guardian Email"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 5th -->
+
+                  <div class="form-row">
+                    <div class="name">Occupation</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="m_occupation"
+                              placeholder="Mother's Occupation"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="f_occupation"
+                              placeholder="Father/Guardian Occupation"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 6th -->
+
+                  <div class="form-row">
+                    <div class="name">Official Address</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="m_official"
+                              placeholder="Mother's official address"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5"
+                              type="text"
+                              name="f_official"
+                              placeholder="Father/Guardian official address"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 7th -->
+
+                  <div class="form-row">
+                    <div class="name">Annual Income</div>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5 income"
+                              type="number"
+                              name="m_income"
+                              placeholder="Mother's income"
+                            />
+                           Lakhs per year
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              class="input--style-5 income"
+                              type="number"
+                              name="f_income"
+                              placeholder="father annual income"
+                            />
+                            Lakhs per year
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- child specification section -->
+
+                <label class="label label--block"
+                  >Whether the Candidate is :</label
+                >
+                <div
+                  style="
+                    border: 2px solid gray;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div class="form-row p-t-20">
+                    <label class="label label--block">Single Girl Child</label>
+                    <div class="p-t-15">
+                      <label class="radio-container m-r-55"
+                        >Yes
+                        <input type="radio" name="single_girl" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container"
+                        >No
+                        <input type="radio" name="single_girl" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-row p-t-20">
+                    <label class="label label--block"
+                      >Specially Abled(divyangjan)</label
+                    >
+                    <div class="p-t-15">
+                      <label class="radio-container m-r-55"
+                        >Yes
+                        <input type="radio" name="specially_abled" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container"
+                        >No
+                        <input type="radio" name="specially_abled" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-row p-t-20">
+                    <label class="label label--block">Belonging to EWS</label>
+                    <div class="p-t-15">
+                      <label class="radio-container m-r-55"
+                        >Yes
+                        <input type="radio" name="belonging_to_ews" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container"
+                        >No
+                        <input type="radio" name="belonging_to_ews" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  category section -->
+
+                <div class="form-row" style="margin-top: 40px">
+                  <div class="name">Category</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <div
+                            class="rs-select2 js-select-simple select--no-search"
+                          >
+                            <select name="category">
+                              <option disabled="disabled" selected="selected">
+                                Choose option
+                              </option>
+                              <option>General</option>
+                              <option>SC</option>
+                              <option>ST</option>
+                              <option>OBC</option>
+                              <option>EWS</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              type="file"
+                              name="category_file"
+                              id="category_file"
+                            />
+                          </div>
+                          <span
+                            ><small
+                              >(Upload Category Certificate. Max File Size 50
+                              MB)</small
+                            >
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- aadhar section-->
+
+                <div class="form-row" style="margin-top: 40px">
+                  <div class="name">Aadhar Number</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <div class="row row-space">
+                        <div class="col-2">
+                          <input
+                            class="input--style-5"
+                            type="text"
+                            name="aadhar"
+                          />
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group-desc">
+                            <input
+                              type="file"
+                              name="category_file"
+                              id="category_file"
+                            />
+                          </div>
+                          <span
+                            ><small
+                              >(Upload Adhar Card. Max File Size 50 MB)</small
+                            >
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  Name of last school attended-->
+
+                <div class="form-row">
+                  <div class="name">Name of last school attended</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <input
+                        class="input--style-5"
+                        type="text"
+                        name="last_school"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!--  Address of last school attended-->
+
+                <div class="form-row">
+                  <div class="name">Address of last school attended</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <input
+                        class="input--style-5"
+                        type="text"
+                        name="last_school"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- class last attended -->
+
+                <div class="form-row" style="margin-top: 40px">
+                  <div class="name">Class Last Attended</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <div
+                        class="rs-select2 js-select-simple select--no-search"
+                      >
+                        <select name="last_class">
+                          <option disabled="disabled" selected="selected">
+                            Choose option
+                          </option>
+                          <option>1st</option>
+                          <option>2nd</option>
+                          <option>3rd</option>
+                          <option>4th</option>
+                          <option>5th</option>
+                          <option>6th</option>
+                          <option>7th</option>
+                          <option>8th</option>
+                          <option>9th</option>
+                          <option>10th</option>
+                          <option>11th</option>
+                          <option>12th</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  Board Section -->
+                <div class="form-row" style="margin-top: 40px">
+                  <div class="name">Last School Affiliated To</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <div
+                        class="rs-select2 js-select-simple select--no-search"
+                      >
+                        <select name="last_school_affiliated">
+                          <option disabled="disabled" selected="selected">
+                            --Select Board--
+                          </option>
+                          <option>CBSE</option>
+                          <option>IB</option>
+                          <option>ICSE</option>
+                          <option>State Board</option>
+                          <option>Any Other</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- result of last class -->
+
+                <label class="label label--block">Result of last Class</label>
+                <div
+                  style="
+                    border: 2px solid gray;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    padding: 20px;
+                  "
+                >
+                  <label class="label label--block" style="padding-left: 75px"
+                    >Subject
+                  </label>
+                  <label class="label label--block" style="padding-left: 75px"
+                    >Max Marks
+                  </label>
+                  <label class="label label--block" style="padding-left: 75px"
+                    >Marks Obtd</label
+                  >
+                  <label class="label label--block" style="padding-left: 75px"
+                    >% of marks
+                  </label>
+
+                  <!-- 1st -->
+                  <div class="form-row" style="margin-top: 5px">
+                    <b>1.</b>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 2nd  -->
+
+                  <div class="form-row" style="margin-top: 5px">
+                    <b>2.</b>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 3rd -->
+
+                  <div class="form-row" style="margin-top: 5px">
+                    <b>3.</b>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4th -->
+
+                  <div class="form-row" style="margin-top: 5px">
+                    <b>4.</b>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 5th -->
+
+                  <div class="form-row" style="margin-top: 5px">
+                    <b>5.</b>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 6th -->
+
+                  <div class="form-row" style="margin-top: 5px">
+                    <b>6.</b>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- transfer certificate details -->
+
+
+
+
+                <label class="label label--block"
+                  >Transfer Certificate Details:</label
+                >
+                <div
+                  style="
+                    border: 2px solid gray;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                  "
+                >
+                  
+                <div class="form-row">
+                  <div class="name">Transfer Certificate No.</div>
+                  <div class="value">
+                    <div class="row row-space">
+                      <div class="col-2">
+                        
+                        <div class="input-group-desc">
+                         
+                          <input
+                            class="input--style-5"
+                            type="text"
+                            name="transfer_cert_no"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-2">
+                       
+                        <div class="input-group-desc">
+                          <input
+                            class="input--style-5"
+                            type="date"
+                            name="issued_date"
+                          />
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+
+                <!-- details of siblings -->
+
+                <label class="label label--block"
+                  >Details of siblings (if any)</label
+                >
+                <div
+                  style="
+                    border: 2px solid gray;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                  "
+                >
+                  <label class="label label--block" style="padding-left: 75px"
+                    >Name </label
+                  >&nbsp;&nbsp;&nbsp;
+                  <label class="label label--block" style="padding-left: 75px"
+                    >brother/sister</label
+                  >
+                  <label class="label label--block" style="padding-left: 75px"
+                    >age</label
+                  >&nbsp;&nbsp;&nbsp;
+                  <label class="label label--block" style="padding-left: 75px"
+                    >school studying in</label
+                  >
+
+                  <div class="form-row" style="margin-top: 5px">
+                    <b></b>
+                    <div class="value">
+                      <div class="row row-space">
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+
+                        <div class="col-3">
+                          <div class="input-group-desc">
+                            <input class="input--style-5" type="text" name="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr />
+
+                <!-- declaration section -->
+
+                <center style="font-size: 20px; font-weight: bold">
+                  Declaration
+                </center>
+
+                <div
+                  style="
+                    border: 2px solid gray;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                  "
+                >
+                  <p>
+                    I hereby declare that the above information including name
+                    of the candidate. The Guardian's name, mother's name and
+                    date of birth furnished by me is correct to my knowledge and
+                    belief.I shall abide by the rules of the school.
+                  </p>
+                </div>
+
+                <button class="submit" type="submit">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+<!-- end document-->
